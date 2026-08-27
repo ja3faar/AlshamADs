@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الشام للإعلانات | حملات إعلانية متكاملة وتصميم لوغو احترافي</title>
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --bg-0:#0a121c;
+    --bg-1:#0d1b2a;
+    --bg-2:#122436;
+    --card:#132738;
+    --line:rgba(212,175,55,.22);
+    --gold:#d9b24c;
+    --gold-2:#f0d27a;
+    --ink:#eef2f6;
+    --ink-dim:#9fb0c0;
+    --radius:16px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg-1);
+    color:var(--ink);
+    font-family:'Tajawal', sans-serif;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.brand,.btn,.nav-links a{font-family:'Cairo', sans-serif;}
+  a{text-decoration:none; color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    display:inline-block; color:var(--gold-2); font-weight:700;
+    letter-spacing:.3px; margin-bottom:8px; font-size:.95rem;
+  }
+  .section-title{font-size:2rem; font-weight:800; margin-bottom:6px;}
+  .section-head{text-align:center; margin-bottom:44px;}
+  .section-head p{color:var(--ink-dim); margin-top:8px; font-size:.98rem;}
+  section{padding:80px 0;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(10,18,28,.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 0;
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand img{width:46px; height:46px; border-radius:50%; object-fit:cover;
+    box-shadow:0 0 0 2px var(--gold), 0 0 18px rgba(217,178,76,.35);}
+  .brand-text{font-weight:800; font-size:1.15rem; color:var(--gold-2); line-height:1.2;}
+  .brand-text span{display:block; font-size:.62rem; font-weight:400; color:var(--ink-dim); font-family:'Tajawal';}
+  .nav-links{display:flex; gap:30px; align-items:center;}
+  .nav-links a{color:var(--ink); font-weight:600; font-size:.95rem; transition:.2s;}
+  .nav-links a:hover{color:var(--gold-2);}
+  .nav-actions{display:flex; align-items:center; gap:18px;}
+  .icon-btn{position:relative; font-size:1.1rem; color:var(--ink);}
+  .icon-btn .dot{
+    position:absolute; top:-6px; left:-8px; background:var(--gold);
+    color:#241a03; font-size:.62rem; font-weight:800; border-radius:50%;
+    width:16px; height:16px; display:flex; align-items:center; justify-content:center;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; justify-content:center;
+    padding:12px 26px; border-radius:999px; font-weight:700; font-size:.92rem;
+    cursor:pointer; border:1px solid transparent; transition:.2s; white-space:nowrap;
+  }
+  .btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold)); color:#241a03;}
+  .btn-gold:hover{filter:brightness(1.08); transform:translateY(-1px);}
+  .btn-outline{border-color:var(--gold); color:var(--gold-2); background:transparent;}
+  .btn-outline:hover{background:rgba(217,178,76,.1);}
+  .menu-toggle{display:none; font-size:1.4rem; background:none; border:none; color:var(--ink); cursor:pointer;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative; padding:70px 0 0;
+    background:radial-gradient(1100px 500px at 80% -10%, rgba(217,178,76,.10), transparent),
+               radial-gradient(900px 500px at 10% 10%, rgba(37,72,120,.35), transparent);
+  }
+  .hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:40px; align-items:center;}
+  .hero h1{font-size:2.7rem; line-height:1.25; font-weight:900; margin-bottom:6px;}
+  .hero h1 em{font-style:normal; color:var(--gold-2);}
+  .hero .sub-en{color:var(--ink-dim); font-weight:600; margin-bottom:18px; font-size:1.05rem;}
+  .hero p.desc{color:var(--ink-dim); max-width:520px; margin-bottom:28px; line-height:1.9;}
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
+  .hero-visual{
+    position:relative; aspect-ratio:1/1; border-radius:28px; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+    background:radial-gradient(circle at 50% 45%, rgba(217,178,76,.18), rgba(9,16,26,.9) 65%);
+    border:1px solid var(--line);
+  }
+  .hero-visual img{width:70%; filter:drop-shadow(0 20px 40px rgba(0,0,0,.5));}
+  .float-chip{
+    position:absolute; background:var(--card); border:1px solid var(--line);
+    border-radius:14px; padding:10px 14px; display:flex; align-items:center; gap:8px;
+    font-size:.85rem; font-weight:700; box-shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  .float-chip i{color:var(--gold-2);}
+  .chip-1{top:8%; right:6%;}
+  .chip-2{bottom:12%; left:4%;}
+  .chip-3{top:44%; left:-2%;}
+  .stats-bar{
+    margin-top:64px; background:var(--bg-2); border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .stats-grid{
+    display:grid; grid-template-columns:repeat(4,1fr);
+    text-align:center; padding:30px 0;
+  }
+  .stats-grid div + div{border-right:1px solid var(--line);}
+  .stat-num{font-size:1.8rem; font-weight:900; color:var(--gold-2); font-family:'Cairo';}
+  .stat-label{color:var(--ink-dim); font-size:.85rem; margin-top:4px;}
+
+  /* ---------- Services ---------- */
+  .services-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .service-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px 18px; text-align:center; transition:.25s;
+  }
+  .service-card:hover{transform:translateY(-6px); border-color:var(--gold);}
+  .service-card i{font-size:1.7rem; color:var(--gold-2); margin-bottom:14px;}
+  .service-card h3{font-size:.98rem; font-weight:700; margin-bottom:4px;}
+  .service-card span{color:var(--ink-dim); font-size:.78rem;}
+  .service-wide{
+    grid-column:1 / -1; display:flex; align-items:center; justify-content:center; gap:14px;
+    background:linear-gradient(135deg, rgba(217,178,76,.14), rgba(217,178,76,.03));
+  }
+
+  /* ---------- Portfolio ---------- */
+  .tabs{display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:36px;}
+  .tab{
+    padding:9px 22px; border-radius:999px; border:1px solid var(--line);
+    font-weight:700; font-size:.85rem; color:var(--ink-dim); cursor:pointer; transition:.2s;
+    background:transparent;
+  }
+  .tab.active, .tab:hover{background:var(--gold); color:#241a03; border-color:var(--gold);}
+  .portfolio-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:16px;}
+  .p-card{
+    aspect-ratio:3/4; border-radius:var(--radius); overflow:hidden; position:relative;
+    border:1px solid var(--line); background:var(--card);
+    display:flex; align-items:center; justify-content:center; text-align:center;
+  }
+  .p-card .placeholder{color:var(--ink-dim); font-size:.8rem; padding:14px; line-height:1.7;}
+  .p-card .placeholder i{display:block; font-size:1.6rem; margin-bottom:10px; color:var(--gold-2);}
+  .p-card img{width:100%; height:100%; object-fit:cover;}
+  .center-btn{display:flex; justify-content:center; margin-top:38px;}
+
+  /* ---------- Why choose us ---------- */
+  .why-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:18px;}
+  .why-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px 14px; text-align:center;
+  }
+  .why-card i{font-size:1.6rem; color:var(--gold-2); margin-bottom:12px;}
+  .why-card h3{font-size:.92rem; font-weight:700; margin-bottom:4px;}
+  .why-card span{color:var(--ink-dim); font-size:.76rem;}
+
+  /* ---------- Store ---------- */
+  .store-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:18px;}
+  .store-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    overflow:hidden; display:flex; flex-direction:column;
+  }
+  .store-img{
+    aspect-ratio:1/1; background:linear-gradient(135deg,#1a2c3d,#0f1c28);
+    display:flex; align-items:center; justify-content:center; color:var(--ink-dim); font-size:1.6rem;
+  }
+  .store-body{padding:16px; text-align:center;}
+  .store-body h3{font-size:.88rem; font-weight:700; margin-bottom:6px;}
+  .price{color:var(--gold-2); font-weight:800; margin-bottom:12px; font-family:'Cairo';}
+  .add-btn{
+    width:100%; padding:9px; border-radius:999px; border:1px solid var(--gold);
+    background:transparent; color:var(--gold-2); font-weight:700; font-size:.8rem; cursor:pointer;
+  }
+  .add-btn:hover{background:var(--gold); color:#241a03;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--bg-0); border-top:1px solid var(--line); padding:64px 0 24px;}
+  .footer-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px; text-align:center; align-items:center;}
+  .footer-brand img{width:70px; margin:0 auto 10px;}
+  .footer-brand h3{color:var(--gold-2); font-size:1.2rem; font-weight:800;}
+  .footer-brand p{color:var(--ink-dim); font-size:.8rem; margin-top:6px;}
+  .footer-col h4{margin-bottom:14px; font-weight:700;}
+  .footer-col p{color:var(--ink-dim); font-size:.85rem; margin-bottom:14px;}
+  .contact-line{display:flex; align-items:center; justify-content:center; gap:8px; color:var(--ink-dim); margin-bottom:10px;}
+  .contact-line i{color:#25D366;}
+  .newsletter{display:flex; gap:8px; max-width:280px; margin:0 auto;}
+  .newsletter input{
+    flex:1; padding:10px 14px; border-radius:999px; border:1px solid var(--line);
+    background:var(--bg-2); color:var(--ink); font-family:'Tajawal';
+  }
+  .footer-bottom{
+    margin-top:50px; padding-top:24px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+    color:var(--ink-dim); font-size:.8rem;
+  }
+  .socials{display:flex; gap:14px;}
+  .socials a{width:34px; height:34px; border:1px solid var(--line); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; transition:.2s;}
+  .socials a:hover{background:var(--gold); color:#241a03; border-color:var(--gold);}
+
+  .wa-float{
+    position:fixed; bottom:24px; left:24px; width:56px; height:56px; border-radius:50%;
+    background:#25D366; display:flex; align-items:center; justify-content:center;
+    font-size:1.5rem; color:#fff; box-shadow:0 8px 24px rgba(0,0,0,.4); z-index:60;
+  }
+
+  @media(max-width:980px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-visual{max-width:380px; margin:0 auto;}
+    .services-grid, .why-grid, .store-grid{grid-template-columns:repeat(2,1fr);}
+    .portfolio-grid{grid-template-columns:repeat(2,1fr);}
+    .stats-grid{grid-template-columns:repeat(2,1fr); gap:20px;}
+    .stats-grid div:nth-child(2n){border-right:none;}
+    .stats-grid div:nth-child(n+3){border-top:1px solid var(--line); padding-top:16px;}
+    .footer-grid{grid-template-columns:1fr;}
+    .nav-links{
+      position:fixed; inset:64px 0 auto 0; background:var(--bg-1); flex-direction:column;
+      padding:20px; gap:16px; border-bottom:1px solid var(--line); transform:translateY(-140%);
+      transition:.3s;
+    }
+    .nav-links.open{transform:translateY(0);}
+    .menu-toggle{display:block;}
+  }
+  @media(max-width:560px){
+    .hero h1{font-size:2rem;}
+    .services-grid, .why-grid, .store-grid, .portfolio-grid{grid-template-columns:1fr 1fr;}
+    section{padding:56px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <img src="logo.png" alt="شعار الشام للإعلانات">
+      <div class="brand-text">الشام للإعلانات<span>Al Sham Advertisements</span></div>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">الرئيسية</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#about">من نحن</a>
+      <a href="#portfolio">أعمالنا</a>
+      <a href="#store">المتجر</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#store" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i><span class="dot">0</span></a>
+      <a href="#contact" class="btn btn-gold">اطلب الآن</a>
+      <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">حلول إعلانية وتصميم وتسويق رقمي</span>
+      <h1>نصنّع إعلانك <br> ونموّ <em>علامتك التجارية</em></h1>
+      <p class="sub-en">We Create Your Ads And Grow Your Brand</p>
+      <p class="desc">حلول إعلانية متكاملة من التصميم والنشر إلى التحليل، لنمنح مشروعك حضورًا احترافيًا يستحق الانتباه ويحقق أفضل النتائج لعلامتك التجارية.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-gold"><i class="fa-brands fa-whatsapp"></i> تواصل معنا</a>
+        <a href="#portfolio" class="btn btn-outline"><i class="fa-solid fa-play"></i> شاهد أعمالنا</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="logo.png" alt="شعار الشام للإعلانات">
+      <div class="float-chip chip-1"><i class="fa-brands fa-instagram"></i> إعلانات ممولة</div>
+      <div class="float-chip chip-2"><i class="fa-brands fa-facebook"></i> تصميم احترافي</div>
+      <div class="float-chip chip-3"><i class="fa-solid fa-chart-line"></i> نتائج مضمونة</div>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="wrap stats-grid">
+      <div><div class="stat-num">850+</div><div class="stat-label">عميل ناجح</div></div>
+      <div><div class="stat-num">1200+</div><div class="stat-label">مشروع مكتمل</div></div>
+      <div><div class="stat-num">7+</div><div class="stat-label">سنوات خبرة</div></div>
+      <div><div class="stat-num">24/7</div><div class="stat-label">دعم ومتابعة</div></div>
+    </div>
+  </div>
+  <!-- الأرقام أعلاه أرقام تقديرية من التصميم المرجعي، عدّلها لتطابق أرقامك الحقيقية -->
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our Services</span>
+      <h2 class="section-title">خدماتنا</h2>
+      <p>نقدم لك حلولًا إعلانية متكاملة تساعدك على الوصول لعملائك وزيادة مبيعاتك</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><i class="fa-solid fa-clapperboard"></i><h3>خدمات مونتاج</h3><span>Video Editing</span></div>
+      <div class="service-card"><i class="fa-solid fa-bullhorn"></i><h3>إعلان ممول</h3><span>Sponsored Ads</span></div>
+      <div class="service-card"><i class="fa-solid fa-pen-ruler"></i><h3>تصميم إعلانات</h3><span>Ad Design</span></div>
+      <div class="service-card"><i class="fa-solid fa-images"></i><h3>مصمم صور دعائية</h3><span>Promotional Images</span></div>
+      <div class="service-card"><i class="fa-solid fa-video"></i><h3>تمويل إعلانات</h3><span>Facebook & Insta Ads</span></div>
+      <div class="service-card"><i class="fa-solid fa-arrow-trend-up"></i><h3>ترويج صفحات</h3><span>Page Promotion</span></div>
+      <div class="service-card"><i class="fa-solid fa-film"></i><h3>صناعة فيديو احترافي</h3><span>Promo Video</span></div>
+      <div class="service-card"><i class="fa-solid fa-yin-yang"></i><h3>تصميم لوجو</h3><span>Logo Design</span></div>
+      <div class="service-card"><i class="fa-solid fa-file-image"></i><h3>تصميم بوستر</h3><span>Poster Design</span></div>
+      <div class="service-card"><i class="fa-solid fa-qrcode"></i><h3>باركود و QR</h3><span>Barcode & QR Design</span></div>
+      <div class="service-card service-wide"><i class="fa-solid fa-shield-halved"></i><h3>هوية بصرية متكاملة</h3><span>&nbsp;Visual Identity</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PORTFOLIO ================= -->
+<section id="portfolio" style="background:var(--bg-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our Work</span>
+      <h2 class="section-title">أعمالنا</h2>
+      <p>نماذج من أعمالنا السابقة — قريبًا نضيف صور مشاريعك الحقيقية هنا</p>
+    </div>
+    <div class="tabs">
+      <button class="tab active">الكل</button>
+      <button class="tab">تصميم إعلانات</button>
+      <button class="tab">شعارات</button>
+      <button class="tab">بوسترات</button>
+      <button class="tab">فيديوهات</button>
+    </div>
+    <!-- كل بطاقة أدناه مكان محجوز (placeholder) — استبدل الأيقونة بصورة عملك الحقيقية لاحقًا بوضع <img src="..."> بدل الـ div الخاص بالـ placeholder -->
+    <div class="portfolio-grid">
+      <div class="p-card"><div class="placeholder"><i class="fa-solid fa-image"></i>أضف صورة عمل هنا</div></div>
+      <div class="p-card"><div class="placeholder"><i class="fa-solid fa-image"></i>أضف صورة عمل هنا</div></div>
+      <div class="p-card"><div class="placeholder"><i class="fa-solid fa-image"></i>أضف صورة عمل هنا</div></div>
+      <div class="p-card"><div class="placeholder"><i class="fa-solid fa-image"></i>أضف صورة عمل هنا</div></div>
+      <div class="p-card"><div class="placeholder"><i class="fa-solid fa-image"></i>أضف صورة عمل هنا</div></div>
+    </div>
+    <div class="center-btn"><a href="#" class="btn btn-gold">عرض المزيد</a></div>
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why Choose Us?</span>
+      <h2 class="section-title">لماذا تختارنا؟</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><i class="fa-solid fa-user-tie"></i><h3>فريق محترف</h3><span>خبرة في مجال الإعلان والتسويق</span></div>
+      <div class="why-card"><i class="fa-solid fa-lightbulb"></i><h3>أفكار إبداعية</h3><span>تصاميم مبتكرة تجذب الانتباه</span></div>
+      <div class="why-card"><i class="fa-solid fa-bullseye"></i><h3>نتائج مضمونة</h3><span>تركيز على تحقيق أهدافك</span></div>
+      <div class="why-card"><i class="fa-solid fa-tags"></i><h3>أسعار تنافسية</h3><span>أفضل جودة بأنسب سعر</span></div>
+      <div class="why-card"><i class="fa-solid fa-headset"></i><h3>دعم مستمر</h3><span>متابعة على مدار الساعة</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STORE ================= -->
+<section id="store" style="background:var(--bg-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our Store</span>
+      <h2 class="section-title">متجرنا</h2>
+    </div>
+    <div class="store-grid">
+      <div class="store-card">
+        <div class="store-img"><i class="fa-solid fa-file-image"></i></div>
+        <div class="store-body"><h3>تصميم بوستر احترافي</h3><div class="price">$15</div><button class="add-btn">أضف للسلة</button></div>
+      </div>
+      <div class="store-card">
+        <div class="store-img"><i class="fa-solid fa-shapes"></i></div>
+        <div class="store-body"><h3>تصميم شعار احترافي</h3><div class="price">$25</div><button class="add-btn">أضف للسلة</button></div>
+      </div>
+      <div class="store-card">
+        <div class="store-img"><i class="fa-solid fa-video"></i></div>
+        <div class="store-body"><h3>فيديو دعائي قصير</h3><div class="price">$50</div><button class="add-btn">أضف للسلة</button></div>
+      </div>
+      <div class="store-card">
+        <div class="store-img"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="store-body"><h3>هوية بصرية متكاملة</h3><div class="price">$120</div><button class="add-btn">أضف للسلة</button></div>
+      </div>
+      <div class="store-card">
+        <div class="store-img"><i class="fa-solid fa-layer-group"></i></div>
+        <div class="store-body"><h3>باقة إدارة صفحات</h3><div class="price">$80</div><button class="add-btn">أضف للسلة</button></div>
+      </div>
+    </div>
+    <div class="center-btn"><a href="#" class="btn btn-gold">عرض المتجر كامل</a></div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact">
+  <div class="wrap footer-grid">
+    <div class="footer-col">
+      <h4>تواصل معنا الآن</h4>
+      <p>خلّي إعلانك يوصل لأكبر عدد من عملائك</p>
+      <div class="contact-line"><i class="fa-brands fa-whatsapp"></i> 0985913472</div>
+      <!-- عدّل الرقم أعلاه ليصبح رقم واتساب الشركة الحقيقي -->
+    </div>
+    <div class="footer-brand">
+      <img src="logo.png" alt="شعار الشام للإعلانات">
+      <h3>الشام للإعلانات</h3>
+      <p>حملات إعلانية متكاملة | تصميم لوجو احترافي</p>
+    </div>
+    <div class="footer-col">
+      <h4>اشترك في نشرتنا</h4>
+      <p>احصل على آخر العروض والأخبار</p>
+      <div class="newsletter">
+        <input type="email" placeholder="أدخل بريدك الإلكتروني">
+      </div>
+      <a href="#" class="btn btn-gold" style="margin-top:12px; display:inline-flex;">اشترك الآن</a>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <div>جميع الحقوق محفوظة © 2026 الشام للإعلانات</div>
+    <div>اللاذقية، الزراعة، شارع برهان عليا</div>
+    <div class="socials">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-telegram"></i></a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/0985913472" class="wa-float" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
